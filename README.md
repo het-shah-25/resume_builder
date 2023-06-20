@@ -1,4 +1,4 @@
-<div align="center">
+<!-- <div align="center">
 <h1>Single Page Resume Builder</h1>
 
 ### Free and open source, fully customizable professional single page resume builder
@@ -32,4 +32,4 @@
 
 ---
 
-
+ -->
