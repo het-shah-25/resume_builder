@@ -11,6 +11,7 @@ import {
   useEducation,
   useLabels,
   useProject,
+  useWork4,
 } from 'src/stores/data.store';
 
 /* Template 3 components */
@@ -90,38 +91,38 @@ export default function Template4() {
       <Intro name="Varchasvi" intro={intro} />
       <div className="body">
         <div className="body__section body__section--left">
-          <Section icon="education" title={labels[9]}>
+          <Section icon="education" title="EDUCATION">
             <Education data={education} />
           </Section>
           <Section icon="expert" title={labels[5]}>
             <UnratedCapsules data={[...languages, ...frameworks]} />
           </Section>
 
-          <Section icon="skill" title={labels[6]}>
+          <Section icon="skill" title="SKILLS">
             <UnratedCapsules data={[...technologies, ...libraries, ...databases]} />
           </Section>
 
-          <Section icon="branch" title={labels[7]}>
+          <Section icon="branch" title="METHODOLOGY / APPROACH">
             <UnratedCapsules data={practices} />
           </Section>
 
-          <Section icon="tool" title={labels[8]}>
+          <Section icon="tool" title="TOOLS">
             <UnratedCapsules data={tools} />
           </Section>
 
-          <Section icon="key" title={labels[1]}>
+          <Section icon="key" title="INTERESTS">
             <Description description={involvements} />
           </Section>
         </div>
 
         <div className="body__section body__section--right">
-          <Section icon="work" title={labels[0]}>
+          <Section icon="work" title="INTERESTS">
             <Exp companies={experience.companies} />
           </Section>
-          <Section icon="file" title="Projects">
+          <Section icon="file" title="PROJECTS">
             <Project projects={projects.projects} />
           </Section>
-          <Section icon="certificate" title={labels[2]}>
+          <Section icon="certificate" title="ACHIEVEMENTS">
             <Description description={achievements} />
           </Section>
         </div>

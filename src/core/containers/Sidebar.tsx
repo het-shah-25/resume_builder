@@ -32,12 +32,12 @@ const sideBarList = [
     icon: 'template',
     component: <Templates />,
   },
-  // {
-  //   key: 1,
-  //   title: 'Theme',
-  //   icon: 'color',
-  //   component: <Themes />,
-  // },
+  {
+    key: 1,
+    title: 'Theme',
+    icon: 'color',
+    component: <Themes />,
+  },
 ];
 
 const IconWrapper = styled.div`
@@ -100,7 +100,7 @@ export const Sidebar = () => {
     <Wrapper>
       <SideDrawer isShown={activeTab !== -1}>{sideBarList[activeTab]?.component}</SideDrawer>
       <SideMenu menuList={sideBarList} onClick={clickHandler}>
-        {/* <IconWrapper onClick={zoomout}>
+        <IconWrapper onClick={zoomout}>
           <IconButton>{getIcon('zoomout')}</IconButton>
         </IconWrapper>
 
@@ -114,7 +114,7 @@ export const Sidebar = () => {
 
         <UploadSettings />
         <SaveSettings />
-        <PrintSettings /> */}
+        <PrintSettings />
       </SideMenu>
     </Wrapper>
   );

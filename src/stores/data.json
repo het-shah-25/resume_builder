@@ -117,6 +117,18 @@
       "summary": "* Design easy user interfaces and great user experiences for the digital platforms of small companies\n* Wordpress development, including themes creation or customization, custom plugins development and training\n* E-commerce maintenance with Fastcommerce, a Brazilian e-commerce platform\n* E-commerce development with Magento, customizing preexisting themes \n* Integrate external services such as payment services, delivery, etc into Magento solutions\n* VPS configuration and optimization (Apache & Nginx)"
     }
   ],
+  "work4": [
+    {
+      "name": "Company 1",
+      "position": "Senior Software Developer",
+      "url": "",
+      "startDate": "Apr 2021",
+      "endDate": "present",
+      "years": "2.5 years",
+      "highlights": [],
+      "summary": "* Use my extensive experience with front end development to define the structure and components for the project, making sure they are reusable\n* Keep the code quality high reviewing code from other developers and suggesting improvements\n* Interact with the designer to suggest changes and to make sure the view he has about the design is translated into actual functionality\n* E-commerce maintenance **with Fastcommerce**, a Brazilian e-commerce platform"
+    }
+  ],
 
   "education": [
     {

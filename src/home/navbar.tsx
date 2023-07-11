@@ -38,7 +38,8 @@ const NavBar: NextPage = () => {
     <Nav>
       <Link href="/">
         <a>
-          <Image src="/logo.png" alt="logo" height="50px" width="50px" />
+          {/* <Image src="/resume_logo2.png" alt="logo" height="100px" width="100px" /> */}
+          <h1>#Resume Logo</h1>
         </a>
       </Link>
       <RightItemsContainer>

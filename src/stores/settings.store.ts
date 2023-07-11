@@ -24,7 +24,7 @@ const Template4 = dynamic(() => import('src/templates/layouts/Template4'), {
 });
 
 export const templates = [
-  // ProfessionalTemplate,
+  ProfessionalTemplate,
   // LegacyTemplate,
   // Template3,
   Template4,
@@ -32,7 +32,7 @@ export const templates = [
   // Template6,
 ];
 // export const templatesSrc = [ProfessionalImg, LegacyImg, FancyImg, DAIICT, NewImg, NewImg];
-export const templatesSrc = [DAIICT];
+export const templatesSrc = [ProfessionalImg, DAIICT];
 
 export const templatesName = [
   'Professional',
