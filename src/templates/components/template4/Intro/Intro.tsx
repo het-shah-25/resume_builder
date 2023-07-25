@@ -28,7 +28,7 @@ const IntroContainer = styled.div`
       &__name {
         font-size: 18px;
         font-weight: 700;
-        color: ${(props) => Color(props.theme.primaryColor).toString()};
+        color: rgb(0,0,0)};
       }
       &__title {
         font-size: 14px;

@@ -61,7 +61,7 @@ const Hero: NextPage = () => {
   return (
     <HeroHolder>
       <div>
-        <h3>Free & Open source</h3>
+        {/* <h3>Free & Open source</h3> */}
         <h1>
           Single Page <br />
           Resume Builder

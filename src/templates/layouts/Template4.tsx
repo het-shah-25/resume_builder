@@ -11,10 +11,10 @@ import {
   useEducation,
   useLabels,
   useProject,
+  useVolunteer,
   useWork4,
 } from 'src/stores/data.store';
 
-/* Template 3 components */
 import {
   Intro,
   TechnicalExpertise,
@@ -37,7 +37,7 @@ const ResumeContainer = styled.div`
     display: flex;
     margin-top: 10px;
     &__section {
-      border: 1px solid rgba(0, 0, 0, 0.2);
+      border: 1px solid rgba(0, 0, 0, 0);
       border-radius: 4px;
       min-height: 30vh;
       &--left {
@@ -63,6 +63,7 @@ export default function Template4() {
   const education = useEducation((state: any) => state.education);
   const experience = useWork((state: any) => state);
   const projects = useProject((state: any) => state);
+  const volunteer = useVolunteer((state: any) => state);
   const [involvements, achievements] = useActivities(
     (state: any) => [state.involvements, state.achievements],
     shallow
@@ -91,40 +92,45 @@ export default function Template4() {
       <Intro name="Varchasvi" intro={intro} />
       <div className="body">
         <div className="body__section body__section--left">
-          <Section icon="education" title="EDUCATION">
+          <Section title="EDUCATION">
             <Education data={education} />
           </Section>
-          <Section icon="expert" title={labels[5]}>
+          {/* <Section icon="expert" title={labels[5]}>
             <UnratedCapsules data={[...languages, ...frameworks]} />
-          </Section>
+          </Section> */}
 
-          <Section icon="skill" title="SKILLS">
+          <Section title="SKILLS">
             <UnratedCapsules data={[...technologies, ...libraries, ...databases]} />
           </Section>
-
+          {/* 
           <Section icon="branch" title="METHODOLOGY / APPROACH">
             <UnratedCapsules data={practices} />
           </Section>
 
           <Section icon="tool" title="TOOLS">
             <UnratedCapsules data={tools} />
+          </Section> */}
+
+          <Section icon="key" title="Volunteering">
+            
           </Section>
 
-          <Section icon="key" title="INTERESTS">
+          <Section title="INTERESTS">
             <Description description={involvements} />
           </Section>
         </div>
 
         <div className="body__section body__section--right">
-          <Section icon="work" title="INTERESTS">
+          <Section title="EXPERIENCE">
             <Exp companies={experience.companies} />
           </Section>
-          <Section icon="file" title="PROJECTS">
+          <Section title="PROJECTS">
             <Project projects={projects.projects} />
           </Section>
-          <Section icon="certificate" title="ACHIEVEMENTS">
+          <Section title="ACHIEVEMENTS">
             <Description description={achievements} />
           </Section>
+
         </div>
       </div>
     </ResumeContainer>

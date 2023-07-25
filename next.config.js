@@ -7,4 +7,5 @@ module.exports = {
   eslint: {
     dirs: ['src/pages', 'src/core', 'src/stores', 'src/templates', 'src/home'],
   },
+  output: 'export',
 };

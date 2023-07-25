@@ -9,8 +9,8 @@ const Editor: NextPage = () => {
   return (
     <FlexHC>
       <Head>
-        <title>Resume Builder</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>Resume Genius</title>
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
       <LeftNav />

@@ -13,13 +13,13 @@ const SectionContainer = styled.section(({ style }: any) => [
         margin-right: 4px;
         display: flex;
         align-items: center;
-        svg {
-          fill: ${(props) => props.theme.primaryColor};
-        }
+        // svg {
+        //   fill: rgb(0, 0, 0);
+        // }
       }
       &__text {
         margin: 0;
-        color: ${(props) => props.theme.primaryColor};
+        color: rgb(0, 0, 0);
         font-weight: 700;
         font-size: 15px;
         margin-right: 10px;
