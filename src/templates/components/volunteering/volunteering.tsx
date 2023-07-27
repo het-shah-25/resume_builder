@@ -31,38 +31,37 @@ const TimelineItem = styled(FlexTimeline.Item)`
   }
 `;
 
-const ProjectName = styled.div`
+const OrganizationName = styled.div`
   font-size: 1rem;
   font-weight: 500;
 `;
 
-const ProjectDate = styled.div`
+const Expdate = styled.div`
   font-style: italic;
   font-size: 0.6rem;
 `;
 
 const mdParser = new MarkdownIt(/* Markdown-it options */);
 
-export function ProjectHeader({ project }: any) {
+export function VolunteeringHeader({ volunteer }: any) {
   return (
     <>
       <Flex jc="space-between" ai="flex-end" style={{ lineHeight: 'initial' }}>
-        <ProjectName>{project.name}</ProjectName>
-      </Flex>
-      <Flex jc="space-between" ai="flex-end">
-        <ProjectDate>{project.date}</ProjectDate>
+        <OrganizationName>{volunteer.organization}</OrganizationName>
+        <Expdate>
+          {volunteer.startDate} - {volunteer.endDate}
+        </Expdate>
       </Flex>
     </>
   );
 }
-
-export function Project({ projects, styles }: any) {
+export function Volunteering({ volunteers, styles }: any) {
   return (
     <FlexTimeline style={styles}>
-      {projects.map((project: any, index: number) => (
-        <TimelineItem key={`${project.name}-${index}`}>
-          <ProjectHeader project={project} />
-          <div dangerouslySetInnerHTML={{ __html: mdParser.render(project.summary ?? '') }} />
+      {volunteers.map((volunteer: any, index: number) => (
+        <TimelineItem key={`${volunteer.organization}-${index}`}>
+          <VolunteeringHeader volunteer={volunteer} />
+          <div dangerouslySetInnerHTML={{ __html: mdParser.render(volunteer.summary ?? '') }} />
         </TimelineItem>
       ))}
     </FlexTimeline>

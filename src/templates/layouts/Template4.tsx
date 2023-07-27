@@ -12,7 +12,6 @@ import {
   useLabels,
   useProject,
   useVolunteer,
-  useWork4,
 } from 'src/stores/data.store';
 
 import {
@@ -28,6 +27,7 @@ import { Section } from 'src/templates/components/template3/shared';
 import { Exp } from 'src/templates/components/exp/Exp';
 import { Description } from 'src/templates/components/description/Description';
 import { Project } from 'src/templates/components/project/project';
+import { Volunteering } from 'src/templates/components/volunteering/volunteering';
 const ResumeContainer = styled.div`
   height: 100%;
   color: ${(props) => props.theme.fontColor};
@@ -63,7 +63,7 @@ export default function Template4() {
   const education = useEducation((state: any) => state.education);
   const experience = useWork((state: any) => state);
   const projects = useProject((state: any) => state);
-  const volunteer = useVolunteer((state: any) => state);
+  const organization = useVolunteer((state: any) => state);
   const [involvements, achievements] = useActivities(
     (state: any) => [state.involvements, state.achievements],
     shallow
@@ -80,7 +80,6 @@ export default function Template4() {
     ],
     shallow
   );
-
   const labels = useLabels((state: any) => state.labels);
 
   return (
@@ -110,11 +109,9 @@ export default function Template4() {
           <Section icon="tool" title="TOOLS">
             <UnratedCapsules data={tools} />
           </Section> */}
-
-          <Section icon="key" title="Volunteering">
-            
+          <Section title="POSITIONS OF RESPONSIBILITY">
+            <Volunteering volunteers={organization.volunteer} />
           </Section>
-
           <Section title="INTERESTS">
             <Description description={involvements} />
           </Section>
@@ -130,7 +127,6 @@ export default function Template4() {
           <Section title="ACHIEVEMENTS">
             <Description description={achievements} />
           </Section>
-
         </div>
       </div>
     </ResumeContainer>
